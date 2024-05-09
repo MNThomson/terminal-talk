@@ -1,0 +1,15 @@
+[package]
+name = "terminal-talk"
+version = "0.1.0"
+edition = "2021"
+license = "ISC"
+description = "Talk with your friends by zooming in your terminal so they can read it. Yep. That's it."
+repository = "https://github.com/MNThomson/terminal-talk"
+
+[dependencies]
+ctrlc = "3.4.4"
+enigo = { version = "0.2.0", features = ["x11rb"] }
+
+[[bin]]
+name = "ttalk"
+path = "src/main.rs"
