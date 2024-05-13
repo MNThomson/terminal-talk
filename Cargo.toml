@@ -1,6 +1,6 @@
 [package]
 name = "terminal-talk"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 license = "ISC"
 description = "Talk with your friends by zooming in your terminal so they can read it. Yep. That's it."
@@ -12,7 +12,7 @@ x11rb = ["enigo/x11rb"]
 
 [dependencies]
 ctrlc = "3.4.4"
-enigo = { version = "0.2.0" }
+enigo = { version = "0.2.0", features = ["wayland"] }
 
 [[bin]]
 name = "ttalk"
