@@ -25,7 +25,7 @@ impl Zoom {
         match self {
             Zoom::In(x) | Zoom::Out(x) => {
                 let key = if matches!(self, Zoom::In(_)) {
-                    '+'
+                    '='
                 } else {
                     '-'
                 };
