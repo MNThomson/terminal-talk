@@ -24,17 +24,13 @@ impl Zoom {
         enigo.key(Key::Control, Press).unwrap();
         match self {
             Zoom::In(x) | Zoom::Out(x) => {
+                let key = if matches!(self, Zoom::In(_)) {
+                    '+'
+                } else {
+                    '-'
+                };
                 for _ in 0..x {
-                    enigo
-                        .key(
-                            Key::Unicode(if matches!(self, Zoom::In(_)) {
-                                '+'
-                            } else {
-                                '-'
-                            }),
-                            Click,
-                        )
-                        .unwrap();
+                    enigo.key(Key::Unicode(key), Click).unwrap();
                 }
             }
             Zoom::Reset => enigo.key(Key::Unicode('0'), Click).unwrap(),
