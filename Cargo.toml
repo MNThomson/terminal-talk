@@ -1,6 +1,6 @@
 [package]
 name = "terminal-talk"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 license = "ISC"
 description = "Talk with your friends by zooming in your terminal so they can read it. Yep. That's it."

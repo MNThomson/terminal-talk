@@ -21,11 +21,11 @@ impl Zoom {
     fn zoom(self) {
         let mut enigo = Enigo::new(&Settings::default()).unwrap();
 
-        enigo.key(Key::Control, Press).unwrap();
+        enigo.key(Key::LControl, Press).unwrap();
         match self {
             Zoom::In(x) | Zoom::Out(x) => {
                 let key = if matches!(self, Zoom::In(_)) {
-                    '='
+                    '+'
                 } else {
                     '-'
                 };
@@ -35,7 +35,9 @@ impl Zoom {
             }
             Zoom::Reset => enigo.key(Key::Unicode('0'), Click).unwrap(),
         }
-        enigo.key(Key::Control, Release).unwrap();
+        enigo.key(Key::LControl, Release).unwrap();
+        enigo.key(Key::LControl, Click).unwrap();
+        enigo.key(Key::LShift, Click).unwrap();
     }
 }
 
