@@ -18,10 +18,13 @@ $ ttalk
 > Hey there, look it's zoomed in and my friend can read it!
 ```
 
+<p align="center">
+    <kbd><img alt="terminal-talk demo" src="https://github.com/MNThomson/terminal-talk/assets/73045936/33e9e7e3-e439-4099-b18b-7670dcb46116"></kbd>
+</p>
+
 #### License
 <sup>
 
 Licensed under `ISC`
 
 </sup>
-
