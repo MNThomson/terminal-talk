@@ -36,8 +36,6 @@ impl Zoom {
             Zoom::Reset => enigo.key(Key::Unicode('0'), Click).unwrap(),
         }
         enigo.key(Key::LControl, Release).unwrap();
-        enigo.key(Key::LControl, Click).unwrap();
-        enigo.key(Key::LShift, Click).unwrap();
     }
 }
 
